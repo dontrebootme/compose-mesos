@@ -1,0 +1,33 @@
+{
+  "id": "microbot",
+  "container": {
+    "docker": {
+      "image": "dontrebootme/microbot:v1",
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 0,
+          "servicePort": 9000,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "type": "DOCKER"
+  },
+  "healthChecks": [
+    {
+      "protocol": "HTTP",
+      "path": "/",
+      "gracePeriodSeconds": 10,
+      "intervalSeconds": 30
+    }
+  ],
+  "cpus": 0.03,
+  "mem": 64.0,
+  "instances": 1000,
+  "upgradeStrategy": {
+    "minimumHealthCapacity": 0.8,
+    "maximumOverCapacity": 0.1
+  }
+}

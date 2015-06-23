@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Now performing docker-compose kill" && docker-compose kill
+echo "Now performing docker stop" && docker ps -a|awk '!/CONTAINER/{print $1}'|xargs docker stop
+echo "Now performing docker rm" && docker ps -a|awk '!/CONTAINER/{print $1}'|xargs docker rm
+echo "Done"
