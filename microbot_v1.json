@@ -25,7 +25,7 @@
   ],
   "cpus": 0.03,
   "mem": 64.0,
-  "instances": 1000,
+  "instances": 10,
   "upgradeStrategy": {
     "minimumHealthCapacity": 0.8,
     "maximumOverCapacity": 0.1
