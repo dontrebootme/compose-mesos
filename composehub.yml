@@ -1,0 +1,10 @@
+---
+name: compose-mesos
+blurb: Mesos Sandbox Using Docker Compose
+description: |
+  Getting started with Mesos, Marathon and Chronos. Getting started with mesos doesn’t need to be overly complicated. Using docker-compose you can create a full mesos testing environment including marathon and chronos to learn how each component works and test app deployments.
+email: patrick@theoconnor.com
+repo_url: http://github.com/dontrebootme/compose-mesos
+tags: mesos,marathon,compose,chronos,docker,cluster,scheduler
+private: false
+cmd: docker-compose up 
